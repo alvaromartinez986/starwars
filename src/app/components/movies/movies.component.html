@@ -1,0 +1,19 @@
+<h1>Starwars <small>movies</small></h1>
+<hr>
+
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let movie of movies; let i = index">
+      <h3> {{ movie.title }}</h3>
+    <div class="card-block">
+      <h4 class="card-title">{{ movie.release_date }}</h4>
+      <p class="card-text">{{ movie.director }}</p>
+      <p class="card-text"><small class="text-muted">{{ movie.opening_crawl | shorttext }}</small></p>
+      <p class="card-text"><small class="text-muted">{{ movie.producer}}</small></p>
+      <button (click) = "seeMovie(i)"
+      type="button" class="btn btn-outline-primary btn-block">
+        Ver mas...
+      </button>
+    </div>
+  </div>
+
+</div>
